@@ -36,10 +36,6 @@ const About = () => {
               dynamic user experiences. With expertise in modern web technologies, I bring ideas to life 
               through clean, efficient code and thoughtful user interfaces.
             </p>
-            {/* <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed transition-colors duration-300">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source 
-              projects, or sharing my knowledge through blog posts and mentoring.
-            </p> */}
             
             <div className="grid grid-cols-2 gap-6">
               <div>
@@ -58,14 +54,6 @@ const About = () => {
                   anupchannd258@gmail.com
                 </p>
               </div>
-              {/* <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-300">
-                  Experience
-                </h4>
-                <p className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
-                  5+ Years
-                </p>
-              </div> */}
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-300">
                   Education

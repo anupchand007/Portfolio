@@ -34,26 +34,26 @@ const Projects = () => { // React.FC removed
     : projects.filter(project => project.tags.includes(filter));
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
+    <section id="projects" className="py-20 bg-gray-900 ">
+      <div className="container mx-auto px-6 md:px-12 text-white">
+        <div className="mb-16 text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold  mb-4 text-white">
             My Projects
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
-          <p className="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto transition-colors duration-300">
+          <p className="text-gray-600 max-w-3xl mx-auto">
             Here are some of my recent projects. Each one was carefully crafted to solve specific 
             problems and showcase different skills.
           </p>
         </div>
         
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12 ">
           <button
             onClick={() => setFilter('all')}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
               filter === 'all'
                 ? 'bg-blue-600 text-white'
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
             All
@@ -66,7 +66,7 @@ const Projects = () => { // React.FC removed
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 filter === tag
                   ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               {tag}
@@ -78,7 +78,7 @@ const Projects = () => { // React.FC removed
           {filteredProjects.map((project, index) => (
             <div 
               key={project.id}
-              className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 animate-fade-in-up"
+              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative overflow-hidden group h-56">
@@ -110,17 +110,17 @@ const Projects = () => { // React.FC removed
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {project.title}
                 </h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-4 transition-colors duration-300">
+                <p className="text-gray-700 mb-4">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map(tag => (
                     <span 
                       key={tag} 
-                      className="text-xs px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full transition-colors duration-300"
+                      className="text-xs px-3 py-1 bg-gray-100 text-gray-700 rounded-full"
                     >
                       {tag}
                     </span>
@@ -133,7 +133,7 @@ const Projects = () => { // React.FC removed
         
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
+            <p className="text-gray-700">
               No projects found with the selected filter.
             </p>
           </div>
