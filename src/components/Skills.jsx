@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Code, Globe, Layout, Database, Server, Palette } from 'lucide-react';
+import { Code, Globe, Layout, Database, Server, Cloud } from 'lucide-react';
 
 // interface Skill removed
 
@@ -7,14 +7,14 @@ const Skills = () => { // React.FC removed
   const skillsRef = useRef(null);
 
   const skills = [ // Type Skill[] removed
-    { name: 'HTML/CSS', level: 90, icon: <Globe size={24} />, category: 'Frontend' },
-    { name: 'JavaScript', level: 85, icon: <Code size={24} />, category: 'Frontend' },
+    { name: 'HTML/CSS', level: 95, icon: <Globe size={24} />, category: 'Frontend' },
+    { name: 'JavaScript', level: 80, icon: <Code size={24} />, category: 'Frontend' },
     { name: 'React', level: 80, icon: <Layout size={24} />, category: 'Frontend' },
-    { name: 'TypeScript', level: 75, icon: <Code size={24} />, category: 'Frontend' },
-    { name: 'Node.js', level: 70, icon: <Server size={24} />, category: 'Backend' },
-    { name: 'SQL', level: 65, icon: <Database size={24} />, category: 'Backend' },
-    { name: 'UI/UX Design', level: 75, icon: <Palette size={24} />, category: 'Design' },
-    { name: 'GraphQL', level: 60, icon: <Database size={24} />, category: 'Backend' },
+    { name: 'Oracle Cloud', level: 70, icon: <Cloud size={24} />, category: 'Backend' },
+    { name: 'SQL', level: 80, icon: <Database size={24} />, category: 'Backend' },
+    // { name: 'TypeScript', level: 75, icon: <Code size={24} />, category: 'Frontend' },
+    // { name: 'UI/UX Design', level: 75, icon: <Palette size={24} />, category: 'Design' },
+    // { name: 'GraphQL', level: 60, icon: <Database size={24} />, category: 'Backend' },
   ];
 
   const categories = [...new Set(skills.map(skill => skill.category))];

@@ -36,10 +36,10 @@ const About = () => {
               dynamic user experiences. With expertise in modern web technologies, I bring ideas to life 
               through clean, efficient code and thoughtful user interfaces.
             </p>
-            <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed transition-colors duration-300">
+            {/* <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed transition-colors duration-300">
               When I'm not coding, you can find me exploring new technologies, contributing to open-source 
               projects, or sharing my knowledge through blog posts and mentoring.
-            </p>
+            </p> */}
             
             <div className="grid grid-cols-2 gap-6">
               <div>
@@ -71,7 +71,7 @@ const About = () => {
                   Education
                 </h4>
                 <p className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
-                  Bachelor in Information Technology (BIT)
+                  Bachelor in Information Technology
                   <br />
                   Patan Multiple Campus
                 </p>

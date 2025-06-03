@@ -1,9 +1,17 @@
 import React from 'react';
 import { Sun, Moon } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
+import { useTheme } from '../context/ThemeContext'; // Ensure this path is correct
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
+
+  if (!toggleTheme || typeof theme === 'undefined') {
+    // This might happen if the component is rendered outside ThemeProvider
+    // Or if the default context value was not destructured correctly.
+    // For debugging, you could render null or a message.
+    // console.warn("ThemeToggle: theme or toggleTheme is undefined. Check ThemeProvider.");
+    return null; 
+  }
 
   return (
     <button

@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+*{
+  font-family: 'Poppins', 'Courier New', Courier, monospace;
+}
+
 @layer base {
   :root {
     color-scheme: light;

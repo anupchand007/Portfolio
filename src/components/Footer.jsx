@@ -10,10 +10,10 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <a href="#home" className="text-2xl font-bold text-blue-400">
-              Portfolio
+              Anup Chand
             </a>
             <p className="mt-2 text-gray-400 max-w-md">
-              Creating beautiful digital experiences with passion and precision.
+              Trying to make something the world appreciate 💜
             </p>
           </div>
           
@@ -59,8 +59,8 @@ const Footer = () => {
             
             <p className="text-gray-500 text-sm flex items-center">
               © {currentYear} Made with 
-              <Heart size={14} className="mx-1 text-red-500" /> 
-              by Your Name
+              <Heart size={19} className="mx-1 text-purple-500" /> 
+              by Anup Chand
             </p>
           </div>
         </div>
