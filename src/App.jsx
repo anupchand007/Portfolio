@@ -7,10 +7,11 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 
-function App() {
+const AppContent = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,8 +23,8 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider>
-      <div className="relative min-h-screen">
+    <div className={`min-h-screen ${theme === 'dark' ? 'dark' : ''}`}>
+      <div className="min-h-screen bg-white dark:bg-gray-900">
         <Header scrolled={scrolled} />
         <main>
           <Hero />
@@ -37,6 +38,14 @@ function App() {
           <ThemeToggle />
         </div>
       </div>
+    </div>
+  );
+};
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
     </ThemeProvider>
   );
 }

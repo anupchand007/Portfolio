@@ -16,35 +16,34 @@ export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => { // React.FC<{ children: React.ReactNode }> removed
   const [theme, setTheme] = useState(() => {
-    try {
-      // Check localStorage first
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        return savedTheme;
+    if (typeof window !== 'undefined') {
+      // Check if theme is stored in localStorage
+      const storedTheme = localStorage.getItem('theme');
+      if (storedTheme) {
+        return storedTheme;
       }
-      // Then check system preference
+      // Check system preference
       if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         return 'dark';
       }
-      return 'light';
-    } catch {
-      return 'light';
     }
+    return 'light';
   });
 
   useEffect(() => {
-    // Update document class and localStorage when theme changes
+    // Apply theme class to html element
+    const root = window.document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+
+    // Store theme preference
     try {
-      if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-        document.documentElement.classList.remove('light');
-      } else {
-        document.documentElement.classList.remove('dark');
-        document.documentElement.classList.add('light');
-      }
       localStorage.setItem('theme', theme);
     } catch (error) {
-      console.warn('Failed to manage theme:', error);
+      console.warn('Failed to save theme preference:', error);
     }
   }, [theme]);
 
@@ -62,15 +61,7 @@ export const ThemeProvider = ({ children }) => { // React.FC<{ children: React.R
   }, []);
 
   const toggleTheme = () => {
-    setTheme(prevTheme => {
-      const newTheme = prevTheme === 'light' ? 'dark' : 'light';
-      try {
-        localStorage.setItem('theme', newTheme);
-      } catch (error) {
-        console.warn('Failed to save theme preference:', error);
-      }
-      return newTheme;
-    });
+    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
   };
 
   return (

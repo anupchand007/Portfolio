@@ -2,13 +2,11 @@
 
 @layer base {
   :root {
-    --background: 255 255 255;
-    --foreground: 15 23 42;
+    color-scheme: light;
   }
 
   .dark {
-    --background: 15 23 42;
-    --foreground: 255 255 255;
+    color-scheme: dark;
   }
 
   html {
@@ -17,12 +15,15 @@
   }
 
   body {
-    background-color: rgb(var(--background));
-    color: rgb(var(--foreground));
-    transition: background-color 0.3s ease, color 0.3s ease;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
+    @apply bg-white text-gray-900;
+  }
+
+  html.dark body {
+    @apply bg-gray-900 text-white;
+  }
+
+  *, *::before, *::after {
+    @apply transition-colors duration-300;
   }
 }
 

@@ -21,7 +21,7 @@ const Header = ({ scrolled }) => { // Changed from React.FC<HeaderProps> and rem
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg' : ''
+        scrolled ? 'bg- gray-800 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg' : ''
       }`}
     >
       <div className="container mx-auto px-6 py-4">
@@ -31,7 +31,7 @@ const Header = ({ scrolled }) => { // Changed from React.FC<HeaderProps> and rem
             <a
               key={link.title}
               href={link.href}
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400   transition-colors duration-300"
             >
               {link.title}
             </a>

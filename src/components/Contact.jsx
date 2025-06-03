@@ -92,7 +92,7 @@ const Contact = () => {
                     href="mailto:contact@yourdomain.com" 
                     className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
                   >
-                    contact@yourdomain.com
+                    anupchand258@gmail.com
                   </a>
                 </div>
               </div>
@@ -109,7 +109,9 @@ const Contact = () => {
                     href="tel:+919876543210" 
                     className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
                   >
-                    +91 98765 43210
+                    +977 9746332440 (NTC)
+                    <br></br>
+                    +977  9800698102 (NCL)
                   </a>
                 </div>
               </div>
@@ -123,7 +125,7 @@ const Contact = () => {
                     Location
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
-                    Mumbai, India
+                    Kathmandu, Nepal
                   </p>
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import me from "../assets/edited.jpg"
 
 const About = () => {
   return (
@@ -16,7 +17,7 @@ const About = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden mx-auto border-4 border-blue-100 dark:border-blue-900 shadow-xl transition-all duration-300">
                 <img 
-                  src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg" 
+                  src={me}
                   alt="Profile" 
                   className="w-full h-full object-cover"
                 />
@@ -46,7 +47,7 @@ const About = () => {
                   Location
                 </h4>
                 <p className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
-                  San Francisco, CA
+                  Kathmandu, Nepal
                 </p>
               </div>
               <div>
@@ -54,23 +55,25 @@ const About = () => {
                   Email
                 </h4>
                 <p className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
-                  hello@example.com
+                  anupchannd258@gmail.com
                 </p>
               </div>
-              <div>
+              {/* <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-300">
                   Experience
                 </h4>
                 <p className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
                   5+ Years
                 </p>
-              </div>
+              </div> */}
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-300">
                   Education
                 </h4>
                 <p className="text-gray-700 dark:text-gray-300 transition-colors duration-300">
-                  Computer Science, Stanford
+                  Bachelor in Information Technology (BIT)
+                  <br />
+                  Patan Multiple Campus
                 </p>
               </div>
             </div>
@@ -83,7 +86,7 @@ const About = () => {
                 Get In Touch
               </a>
               <a 
-                href="#" 
+                href="https://drive.google.com/file/d/1uG7UWKrRwJ41ghWuY6Sl_9S47QP_nNMl/view?usp=drive_link" 
                 className="inline-block ml-4 px-6 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-semibold rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-all duration-300"
               >
                 Download CV
